@@ -1228,7 +1228,8 @@ getopt()
           optarg  = argv[optind];
         }
 
-      c = checkLongOption();
+      if (long_options != null)
+        c = checkLongOption();
 
       if (longopt_handled)
         return(c);
